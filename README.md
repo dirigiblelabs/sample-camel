@@ -35,7 +35,7 @@ This sample shows the following 3 topics:
 ## Routes
 
 `routes.camel` contains the routes definitions for the following two routes:
-  - `route-3c7a` this route can be called with a POST request to [localhost:8080/services/integrations/endpoint](http://localhost:8080/services/integrations/endpoint) and it will call `handler.js` with the HTTP request payload and then save the final processing result to a localhost:21 FTP server with user test and no password.
+  - `route-3c7a` this route can be called with a POST request to [http://localhost:8080/services/integrations/endpoint](http://localhost:8080/services/integrations/endpoint) and it will call `handler.js` with the HTTP request payload and then save the final processing result to a localhost:21 FTP server with user test and no password.
   - `route-bda8` a direct route that is called by `routeInvoker.mjs` that modifies the message provided by `routeInvoker.mjs` and returns it as a response.
 
 <img width="1464" alt="Screenshot 2024-06-28 at 15 35 51" src="https://github.com/dirigiblelabs/sample-camel/assets/19828259/fff6ac2f-42c0-414d-a62e-b6d81ee87d19">
