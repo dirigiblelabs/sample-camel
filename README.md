@@ -31,6 +31,7 @@ This sample shows the following 3 topics:
 2. Import the `/camel` folder of this repository as a zip in Eclipse Dirigible via the import feature in the UI.
 3. As one of the routes uses the `FTP Component` you can run a local FTP server with `FileZilla Server`
    - You have to setup the FTP server listen on localhost:21 with user 'test' and no auth password for this example.
+     <img width="1152" alt="Screenshot 2024-06-28 at 15 49 17" src="https://github.com/dirigiblelabs/sample-camel/assets/19828259/ae4d2644-d9cf-41cc-8650-d14fe9f3c9c8">
 
 <img width="414" alt="Screenshot 2024-06-28 at 15 27 14" src="https://github.com/dirigiblelabs/sample-camel/assets/19828259/a127582e-805c-4164-ba41-c2a51bb62bc9">
 
