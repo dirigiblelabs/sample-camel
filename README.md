@@ -1,5 +1,11 @@
-# sample-camel
-Sample for dirigible integrations module.
+# Dirigible Integrations - Sample
+A sample for dirigible integrations module.
+This sample shows the following 3 topics:
+- How to use the Designer to create/modify routes.
+- How to invoke Dirigible `*.mjs` files via Camel routes,
+- How to invoke Camel routes from Dirigible `*.mjs` files via the `sdk/integrations` API
+- How to use the built in `Camel FTP` component to save data as a file in an FTP Server.
+
 
 ## Prerequisites
 1. To run this project you need to add the following dependencies:
