@@ -1,0 +1,58 @@
+- route:
+    id: route-3c7a
+    description: Http -> Transform -> Ftp
+    nodePrefixId: route-3f5
+    from:
+      id: from-1644
+      description: /endpoint
+      uri: platform-http
+      parameters:
+        path: /endpoint
+      steps:
+        - log:
+            id: log-4447
+            description: log input message
+            message: '/endpoint called with: ''${body}'''
+        - setProperty:
+            id: setProperty-0872
+            description: prepare handler.mjs call
+            name: resource
+            expression:
+              constant:
+                id: constant-ca9f
+                expression: camel/handler.mjs
+        - to:
+            id: to-d3d5
+            description: call handler.mjs
+            uri: class
+            parameters:
+              beanName: org.eclipse.dirigible.components.engine.camel.invoke.Invoker
+              method: invoke
+        - to:
+            id: to-a742
+            uri: ftp
+            parameters:
+              account: test
+              host: localhost
+              port: '21'
+              username: test
+              fileName: abc.txt
+              directoryName: /pub/example
+- route:
+    id: route-bda8
+    from:
+      id: from-3850
+      uri: direct
+      parameters:
+        name: inbound1
+      steps:
+        - log:
+            id: log-be9c
+            message: '[CamelTest] Route inbound1 called with message: ${body}'
+        - setBody:
+            id: setBody-d2b2
+            description: Modify message
+            expression:
+              simple:
+                id: simple-da41
+                expression: ${body} handled by route
